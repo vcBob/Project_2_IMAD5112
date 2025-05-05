@@ -1,6 +1,9 @@
 package com.example.assignment21
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,5 +14,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.welcome_screen)
+
+        //==========================================================================================
+        //This Calling all components from xml folder to kt folder.
+        val txtQuestion = findViewById<TextView>(R.id.txt_Question)
+        val txtInstruction = findViewById<TextView>(R.id.txt_Instruction)
+        val btnContinue = findViewById<Button>(R.id.btn_Continue)
+        //==========================================================================================
     }
 }
