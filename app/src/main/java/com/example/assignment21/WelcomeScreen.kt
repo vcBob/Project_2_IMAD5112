@@ -21,5 +21,12 @@ class MainActivity : AppCompatActivity() {
         val txtInstruction = findViewById<TextView>(R.id.txt_Instruction)
         val btnContinue = findViewById<Button>(R.id.btn_Continue)
         //==========================================================================================
+
+        //==========================================================================================
+        //Switch between pages.
+        btnContinue.setOnClickListener{
+           val welcomeToFlashcard = Intent(this, FlashcardQuestionScreen::class.java)
+            startActivity(welcomeToFlashcard)
+        }
     }
 }
