@@ -1,5 +1,6 @@
 package com.example.assignment21
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -39,8 +40,13 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         btnTrue.setOnClickListener { txtUserAns.text= "true" }
         btnFalse.setOnClickListener { txtUserAns.text="false" }
         //==========================================================================================
+        var index = 0
+        val userAns=txtUserAns.text.toString()
 
-
+        btnNext.setOnClickListener{
+          if (userAns==arrAns[index]) {txtFeedback.text="Correct"}
+          else{txtFeedback.text="Incorrect"}
+        }
 
 
 
