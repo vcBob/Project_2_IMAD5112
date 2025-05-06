@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class FlashcardQuestionScreen : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -21,16 +22,29 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         val btnTrue = findViewById<Button>(R.id.btn_True)
         val btnFalse = findViewById<Button>(R.id.btn_False)
         val btnNext = findViewById<Button>(R.id.btn_Next)
+        val txtFeedback =findViewById<TextView>(R.id.txt_FeedBack)
+        val txtUserAns =findViewById<TextView>(R.id.txt_UserAns)
+        val txtUserInfo =findViewById<TextView>(R.id.txt_UserInfo)
+
         //==========================================================================================
 
         //==========================================================================================
         // Declaring and populating arrays.
-        val arrQuiz = arrayOf("Q1","Q2","Q3","Q4","Q5")
-        val arrAns = arrayOf("True","False","True","False","True")
+        val arrQuiz = arrayOf("Q1", "Q2", "Q3", "Q4", "Q5")
+        val arrAns = arrayOf("true", "false", "true", "false", "true")
         //==========================================================================================
+
+        //==========================================================================================
+        //True and false button assigning value.
+        btnTrue.setOnClickListener { txtUserAns.text= "true" }
+        btnFalse.setOnClickListener { txtUserAns.text="false" }
+        //==========================================================================================
+
+
 
 
 
 
     }
+
 }
