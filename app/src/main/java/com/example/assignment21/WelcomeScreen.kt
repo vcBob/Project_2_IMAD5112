@@ -26,7 +26,9 @@ class MainActivity : AppCompatActivity() {
         //Switch between pages.
         btnContinue.setOnClickListener{
            val welcomeToFlashcard = Intent(this, FlashcardQuestionScreen::class.java)
-            startActivity(welcomeToFlashcard)
-        }
+            startActivity(welcomeToFlashcard) }
+        //==========================================================================================
     }
+
+
 }
