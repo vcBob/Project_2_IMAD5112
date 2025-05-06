@@ -10,7 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class FlashcardQuestionScreen : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -42,11 +41,19 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         //==========================================================================================
         var index = 0
         val userAns=txtUserAns.text.toString()
+        txtHistQuiz.text=arrQuiz[index]
 
         btnNext.setOnClickListener{
+            if (index >= 4){
+                val flashcardToScore = Intent(this,ScoreScreen ::class.java)
+                startActivity(flashcardToScore)
+            }
+            else{
+                txtHistQuiz.text=arrQuiz[index+1]
           if (userAns==arrAns[index]) {txtFeedback.text="Correct"}
           else{txtFeedback.text="Incorrect"}
-        }
+                index++
+        }}
 
 
 
