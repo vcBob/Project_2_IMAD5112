@@ -15,7 +15,7 @@ class ScoreScreen : AppCompatActivity() {
         setContentView(R.layout.score_screen)
        //===========================================================================================
         //Call all components from xml folder to kt folder.
-        val btnExit = findViewById<Button>(R.id.btn_Next)
+        val btnExit = findViewById<Button>(R.id.btn_Exit)
         val btnReview = findViewById<Button>(R.id.btn_Review)
         val txtComment = findViewById<TextView>(R.id.txt_Comment)
         val txtScore = findViewById<TextView>(R.id.txt_Score)
