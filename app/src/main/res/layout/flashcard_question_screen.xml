@@ -28,7 +28,7 @@
         android:id="@+id/txt_Context"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Answer True or False for the Following Questions:"
+        android:text="Answer 'TRUE' or 'FALSE' for the Following Questions:"
         android:textAlignment="center"
         android:textColor="#002FFF"
         android:textSize="30sp"

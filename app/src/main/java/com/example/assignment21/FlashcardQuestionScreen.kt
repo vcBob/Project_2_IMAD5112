@@ -36,8 +36,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
 
         //==========================================================================================
         //True and false button assigning value.
-        btnTrue.setOnClickListener { txtUserAns.text= "true" }
-        btnFalse.setOnClickListener { txtUserAns.text="false" }
+        btnTrue.setOnClickListener {txtUserAns.text= "true" }
+        btnFalse.setOnClickListener {txtUserAns.text="false" }
         //==========================================================================================
         var index = 0
         val userAns=txtUserAns.text.toString()
