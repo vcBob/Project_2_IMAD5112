@@ -67,6 +67,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 if(arrAns[index]==ans){ txtFeedback.text = "Correct"}
                 else{txtFeedback.text = "incorrect"}
                 //arrUserAns[index]= ans
+
                 index++}
         }
 
