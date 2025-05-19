@@ -15,6 +15,7 @@ class ScoreScreen : AppCompatActivity() {
     private lateinit var txtScore : TextView
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -23,22 +24,28 @@ class ScoreScreen : AppCompatActivity() {
 
 
 
-       //===========================================================================================
+        //===========================================================================================
         //Call all components from xml folder to kt folder.
-         btnExit = findViewById(R.id.btn_Exit)
+        btnExit = findViewById(R.id.btn_Exit)
         btnReview = findViewById(R.id.btn_Review)
         txtComment = findViewById(R.id.txt_Comment)
         txtScore = findViewById(R.id.txt_Score)
         //==========================================================================================
 
+        //==========================================================================================
+        // declaring array from flash screen to score screen.
+        val callScore = intent.getIntExtra("score",0)
+        val callAns = intent.getBooleanArrayExtra("answer")
+        val callQuiz = intent. getStringArrayExtra("quiz")
+        //==========================================================================================
+
+
+
 
 
 
         btnExit.setOnClickListener{finishAffinity()}
-        btnReview.setOnClickListener{
-
-
-        }
+        btnReview.setOnClickListener{  }
     }
 
 }

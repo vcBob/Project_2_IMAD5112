@@ -2,6 +2,7 @@ package com.example.assignment21
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -49,25 +50,38 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         txtUserInfo =findViewById(R.id.txt_UserInfo)
         //==========================================================================================
 
+        //Hide next button at the start of the program.
+        btnNext.setVisibility(View.GONE)
         //==========================================================================================
         //True and false button assigning value.
 
         btnTrue.setOnClickListener {
             ans=true
-            txtUserAns.text="true"}
+            txtUserAns.text="true"
+            btnNext.setVisibility(View.VISIBLE)
+
+            btnTrue.isClickable=false
+            btnFalse.isClickable=false
+
+        }
         btnFalse.setOnClickListener {
             ans=false
-            txtUserAns.text="false"}
+            txtUserAns.text="false"
+            btnNext.setVisibility(View.VISIBLE)
+            btnTrue.isClickable=false
+            btnFalse.isClickable=false}
         //==========================================================================================
         var index = 0
-        val userAns = txtUserAns.text.toString()
+        //val userAns = txtUserAns.text.toString()
         txtHistQuiz.text = arrQuiz[index]
 
         btnNext.setOnClickListener{
+            btnNext.setVisibility(View.GONE)
             if (index >= 4){
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
                 intent.putExtra("score",score)
-                intent.putExtra("User Answer", arrAns)
+                intent.putExtra("answer", arrAns)
+                intent.putExtra("quiz",arrQuiz)
                 startActivity(flashcardToScore)
 
 
@@ -76,7 +90,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 if(arrAns[index]==ans){ txtFeedback.text = "Correct"
                 score++}
                 else{txtFeedback.text = "incorrect"}
-                //arrUserAns[index]= ans
+                //arrUserAns[index] = ans
 
                 index++}
         }
