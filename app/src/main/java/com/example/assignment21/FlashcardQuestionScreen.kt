@@ -64,7 +64,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
                 startActivity(flashcardToScore) }
             else{   txtHistQuiz.text=arrQuiz[index+1]
-                if(arrAns[index]==ans){ txtFeedback.text = "Correct"}
+                if(arrAns[index]==ans){ txtFeedback.text = "Correct"
+                score++}
                 else{txtFeedback.text = "incorrect"}
                 //arrUserAns[index]= ans
 
