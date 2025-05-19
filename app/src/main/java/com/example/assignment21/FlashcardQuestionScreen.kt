@@ -66,7 +66,12 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         btnNext.setOnClickListener{
             if (index >= 4){
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
-                startActivity(flashcardToScore) }
+                intent.putExtra("score",score)
+                intent.putExtra("User Answer", arrAns)
+                startActivity(flashcardToScore)
+
+
+            }
             else{txtHistQuiz.text=arrQuiz[index+1]
                 if(arrAns[index]==ans){ txtFeedback.text = "Correct"
                 score++}

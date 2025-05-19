@@ -6,8 +6,14 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.color.utilities.Score
 
 class ScoreScreen : AppCompatActivity() {
+    private lateinit var btnExit : Button
+    private lateinit var btnReview : Button
+    private lateinit var txtComment : TextView
+    private lateinit var txtScore : TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -19,11 +25,13 @@ class ScoreScreen : AppCompatActivity() {
 
        //===========================================================================================
         //Call all components from xml folder to kt folder.
-        val btnExit = findViewById<Button>(R.id.btn_Exit)
-        val btnReview = findViewById<Button>(R.id.btn_Review)
-        val txtComment = findViewById<TextView>(R.id.txt_Comment)
-        val txtScore = findViewById<TextView>(R.id.txt_Score)
+         btnExit = findViewById(R.id.btn_Exit)
+        btnReview = findViewById(R.id.btn_Review)
+        txtComment = findViewById(R.id.txt_Comment)
+        txtScore = findViewById(R.id.txt_Score)
         //==========================================================================================
+
+
 
 
         btnExit.setOnClickListener{finishAffinity()}
