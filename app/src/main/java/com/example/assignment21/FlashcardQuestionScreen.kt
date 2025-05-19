@@ -52,8 +52,12 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         //==========================================================================================
         //True and false button assigning value.
 
-        btnTrue.setOnClickListener {ans=true }
-        btnFalse.setOnClickListener {ans=false }
+        btnTrue.setOnClickListener {
+            ans=true
+            txtUserAns.text="true"}
+        btnFalse.setOnClickListener {
+            ans=false
+            txtUserAns.text="false"}
         //==========================================================================================
         var index = 0
         val userAns = txtUserAns.text.toString()
@@ -63,7 +67,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             if (index >= 4){
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
                 startActivity(flashcardToScore) }
-            else{   txtHistQuiz.text=arrQuiz[index+1]
+            else{txtHistQuiz.text=arrQuiz[index+1]
                 if(arrAns[index]==ans){ txtFeedback.text = "Correct"
                 score++}
                 else{txtFeedback.text = "incorrect"}
