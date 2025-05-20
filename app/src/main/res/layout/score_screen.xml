@@ -23,8 +23,8 @@
 
     <Button
         android:id="@+id/btn_Review"
-        android:layout_width="310dp"
-        android:layout_height="78dp"
+        android:layout_width="302dp"
+        android:layout_height="64dp"
         android:backgroundTint="@color/black"
         android:text="Review"
         app:layout_constraintBottom_toBottomOf="parent"

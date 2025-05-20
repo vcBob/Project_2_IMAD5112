@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         btnContinue.setOnClickListener{
            val welcomeToFlashcard = Intent(this, FlashcardQuestionScreen::class.java)
             startActivity(welcomeToFlashcard) }
-        //==========================================================================================
+        //========================================================================================== 
     }
 
 

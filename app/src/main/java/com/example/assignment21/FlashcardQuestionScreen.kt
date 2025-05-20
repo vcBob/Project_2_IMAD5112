@@ -36,8 +36,6 @@ class FlashcardQuestionScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.flashcard_question_screen)
-
-
         //==========================================================================================
         //Calling components from xml folder to kt folder.
         btnTrue = findViewById(R.id.btn_True)
@@ -77,6 +75,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
 
         btnNext.setOnClickListener{
             btnNext.setVisibility(View.GONE)
+            btnTrue.isClickable=true
+            btnFalse.isClickable=true
             if (index >= 4){
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
                 intent.putExtra("score",score)
@@ -87,17 +87,11 @@ class FlashcardQuestionScreen : AppCompatActivity() {
 
             }
             else{txtHistQuiz.text=arrQuiz[index+1]
-                if(arrAns[index]==ans){ txtFeedback.text = "Correct"
-                score++}
+                if(arrAns[index]==ans){
+                    txtFeedback.text = "Correct"
+                    score++}
                 else{txtFeedback.text = "incorrect"}
-                //arrUserAns[index] = ans
-
                 index++}
         }
-
-
-
-
     }
-
 }

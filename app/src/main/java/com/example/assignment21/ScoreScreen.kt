@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.color.utilities.Score
 
 class ScoreScreen : AppCompatActivity() {
+    private val arrQuestion = arrayOf("Q1", "Q2", "Q3", "Q4", "Q5")
+    private val arrAnswer = booleanArrayOf(true, false, true, false, true)
+
     private lateinit var btnExit : Button
     private lateinit var btnReview : Button
     private lateinit var txtComment : TextView
@@ -44,8 +47,9 @@ class ScoreScreen : AppCompatActivity() {
 
 
 
+
         btnExit.setOnClickListener{finishAffinity()}
-        btnReview.setOnClickListener{  }
+        btnReview.setOnClickListener{}
     }
 
 }
