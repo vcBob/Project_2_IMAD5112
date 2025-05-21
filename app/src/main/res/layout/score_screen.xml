@@ -66,6 +66,8 @@
         android:layout_height="227dp"
         android:textAlignment="center"
         android:background="@color/white"
+        android:textSize="16sp"
+        android:text="The questions and answers will appear here."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
