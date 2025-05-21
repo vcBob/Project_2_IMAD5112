@@ -29,8 +29,9 @@ class FlashcardQuestionScreen : AppCompatActivity() {
 
     //==============================================================================================
     // declaring private array.
-    private val arrQuiz = arrayOf("Q1", "Q2", "Q3", "Q4", "Q5")
-    private val arrAns = booleanArrayOf(true, false, true, false, true)
+    private val arrQuiz = arrayOf("Napoleon Bonaparte was exiled to the island of Elba before his final defeat at Waterloo.", "The ancient city of Machu Picchu was built by the Aztecs.", "The Cold War included direct military conflict between the United States and the Soviet Union.", "Julius Caesar was assassinated on the Ides of March in 44 BC."
+        , "The Black Death significantly reduced Europe’s population in the 14th century.")
+    private val arrAns = booleanArrayOf(true,false,false,true,true)
 
     //==============================================================================================
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,10 +58,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             ans=true
             txtUserAns.text="true"
             btnNext.setVisibility(View.VISIBLE)
-
             btnTrue.isClickable=false
             btnFalse.isClickable=false
-
         }
         btnFalse.setOnClickListener {
             ans=false
@@ -87,10 +86,14 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                     score++
                     val flashcardToScore = Intent(this, ScoreScreen::class.java)
                     flashcardToScore.putExtra("score", score)
+                    //flashcardToScore.putExtra("arrQuiz",arrQuiz)
+                    //flashcardToScore.putExtra("arrAns",arrAns)
                     startActivity(flashcardToScore)
                 } else {
                     val flashToScore = Intent(this, ScoreScreen::class.java)
-                    intent.putExtra("score", score)
+                    flashToScore.putExtra("score", score)
+                    //flashToScore.putExtra("arrQuiz",arrQuiz.size)
+                    //flashToScore.putExtra("arrAns",arrAns.size)
                     startActivity(flashToScore)
                 }
             }
