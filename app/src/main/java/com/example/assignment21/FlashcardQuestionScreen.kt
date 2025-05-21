@@ -74,26 +74,36 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         //val userAns = txtUserAns.text.toString()
         txtHistQuiz.text = arrQuiz[index]
 
-        btnNext.setOnClickListener{
+        btnNext.setOnClickListener {
             btnNext.setVisibility(View.GONE)
-            btnTrue.isClickable=true
-            btnFalse.isClickable=true
+            btnTrue.isClickable = true
+            btnFalse.isClickable = true
 
-            if (index <= 4){
+
+
+            if (index >= 4) {
+
+                if (arrAns[index] == ans) {
+                    score++
+                    val flashcardToScore = Intent(this, ScoreScreen::class.java)
+                    intent.putExtra("score", score)
+                    startActivity(flashcardToScore)
+                } else {
+                    val flashToScore = Intent(this, ScoreScreen::class.java)
+                    intent.putExtra("score", score)
+                    startActivity(flashToScore)
+                }
+            }
+            else{
                 txtHistQuiz.text=arrQuiz[index+1]
+
                 if(arrAns[index]==ans){
                     txtFeedback.text = "Correct"
                     score++}
-                else{txtFeedback.text = "incorrect"}
-                index++ }
-            else{
-                if(arrAns[index]==ans){score++
-                val flashcardToScore = Intent(this,ScoreScreen ::class.java)
-                intent.putExtra("score", score)
-                startActivity(flashcardToScore)}
-                else {val flashToScore = Intent(this,ScoreScreen ::class.java)
-                intent.putExtra("score", score)
-                startActivity(flashToScore)} }
+                else{txtFeedback.text = "Incorrect"}
+                index++
+            }
         }
+
     }
 }
