@@ -43,10 +43,18 @@ class ScoreScreen : AppCompatActivity() {
         val callScore = intent.getIntExtra("score",0)
         //==========================================================================================
 
+        txtScore.text= "$callScore / ${arrQuestion.size}"
+        if (callScore == 5){txtComment.text="You are an expert in history!"}
+        else if (callScore == 4){txtComment.text="You missed gold by one point"}
+        else if (callScore == 3){txtComment.text=" You did well, though you lost 40% of the points "}
+        else if (callScore == 2){txtComment.text="Try harder next time."}
+        else if (callScore == 1){txtComment.text="Go study!"}
+        else if (callScore == 0){txtComment.text="You need to prepare for the paper, study!"}
+
         btnExit.setOnClickListener{finishAffinity()}
         btnReview.setOnClickListener {val strBuild = StringBuilder()
             for(index in arrQuestion.indices){
-            strBuild.append("Question: ${arrQuestion[index]}Answer: ${arrAnswer[index]}\n") }
+            strBuild.append("Question: ${arrQuestion[index]} \tAnswer: ${arrAnswer[index]}\n") }
             txtReview.text=strBuild.toString()
         }
     }

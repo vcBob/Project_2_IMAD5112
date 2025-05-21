@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 class FlashcardQuestionScreen : AppCompatActivity() {
     //==============================================================================================
     // declaring components as private variables.
-    private var score = 0
+
     private var questionIndex = 0
     private var select = false
     private var ans = false
@@ -70,6 +70,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             btnFalse.isClickable=false}
         //==========================================================================================
         var index = 0
+        var score = 0
         //val userAns = txtUserAns.text.toString()
         txtHistQuiz.text = arrQuiz[index]
 
@@ -77,19 +78,22 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             btnNext.setVisibility(View.GONE)
             btnTrue.isClickable=true
             btnFalse.isClickable=true
-            if (index >= 4){
-                val flashcardToScore = Intent(this,ScoreScreen ::class.java)
-                intent.putExtra("score",score)
-                startActivity(flashcardToScore)
 
-
-            }
-            else{txtHistQuiz.text=arrQuiz[index+1]
+            if (index <= 4){
+                txtHistQuiz.text=arrQuiz[index+1]
                 if(arrAns[index]==ans){
                     txtFeedback.text = "Correct"
                     score++}
                 else{txtFeedback.text = "incorrect"}
-                index++}
+                index++ }
+            else{
+                if(arrAns[index]==ans){score++
+                val flashcardToScore = Intent(this,ScoreScreen ::class.java)
+                intent.putExtra("score", score)
+                startActivity(flashcardToScore)}
+                else {val flashToScore = Intent(this,ScoreScreen ::class.java)
+                intent.putExtra("score", score)
+                startActivity(flashToScore)} }
         }
     }
 }
