@@ -67,7 +67,7 @@ class ScoreScreen : AppCompatActivity() {
             txtReview.visibility=View.VISIBLE
             val strBuild = StringBuilder()
             for(index in arrQuestion.indices){
-            strBuild.append("Question: ${arrQuestion[index]} \tAnswer: ${arrAnswer[index]}\n") }
+            strBuild.append("Question(${index+1}):\n${arrQuestion[index]} \nAnswer(${index+1}):\n${arrAnswer[index]}\n\n") }
             txtReview.text=strBuild.toString()
         }
         btnReviewBack.setOnClickListener{
