@@ -16,11 +16,11 @@ class ScoreScreen : AppCompatActivity() {
     private lateinit var btnReview : Button
     private lateinit var txtComment : TextView
     private lateinit var txtScore : TextView
+    private lateinit var txtReview : TextView
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.score_screen)
@@ -33,23 +33,22 @@ class ScoreScreen : AppCompatActivity() {
         btnReview = findViewById(R.id.btn_Review)
         txtComment = findViewById(R.id.txt_Comment)
         txtScore = findViewById(R.id.txt_Score)
+        txtReview = findViewById(R.id.txtReview)
         //==========================================================================================
+
+        var index = 0
 
         //==========================================================================================
         // declaring array from flash screen to score screen.
         val callScore = intent.getIntExtra("score",0)
-        val callAns = intent.getBooleanArrayExtra("answer")
-        val callQuiz = intent. getStringArrayExtra("quiz")
         //==========================================================================================
 
-
-
-
-
-
-
         btnExit.setOnClickListener{finishAffinity()}
-        btnReview.setOnClickListener{}
+        btnReview.setOnClickListener {val strBuild = StringBuilder()
+            for(index in arrQuestion.indices){
+            strBuild.append("Question: ${arrQuestion[index]}Answer: ${arrAnswer[index]}\n") }
+            txtReview.text=strBuild.toString()
+        }
     }
 
 }

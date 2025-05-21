@@ -31,7 +31,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
     // declaring private array.
     private val arrQuiz = arrayOf("Q1", "Q2", "Q3", "Q4", "Q5")
     private val arrAns = booleanArrayOf(true, false, true, false, true)
-    //private val arrUserAns = booleanArrayOf()
+
     //==============================================================================================
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,8 +80,6 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             if (index >= 4){
                 val flashcardToScore = Intent(this,ScoreScreen ::class.java)
                 intent.putExtra("score",score)
-                intent.putExtra("answer", arrAns)
-                intent.putExtra("quiz",arrQuiz)
                 startActivity(flashcardToScore)
 
 
