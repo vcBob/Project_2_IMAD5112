@@ -86,7 +86,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 if (arrAns[index] == ans) {
                     score++
                     val flashcardToScore = Intent(this, ScoreScreen::class.java)
-                    intent.putExtra("score", score)
+                    flashcardToScore.putExtra("score", score)
                     startActivity(flashcardToScore)
                 } else {
                     val flashToScore = Intent(this, ScoreScreen::class.java)
