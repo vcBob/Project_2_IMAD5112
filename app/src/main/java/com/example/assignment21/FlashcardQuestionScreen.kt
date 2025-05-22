@@ -71,7 +71,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         var index = 0
         var score = 0
         //val userAns = txtUserAns.text.toString()
-        txtHistQuiz.text = arrQuiz[index]
+        txtHistQuiz.text = "QUESTION(${index+1}):\n${arrQuiz[index+1]}"
 
         btnNext.setOnClickListener {
             btnNext.setVisibility(View.GONE)
@@ -98,7 +98,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 }
             }
             else{
-                txtHistQuiz.text=arrQuiz[index+1]
+                txtHistQuiz.text="QUESTION(${index+2}):\n${arrQuiz[index+1]}"
 
                 if(arrAns[index]==ans){
                     txtFeedback.text = "Correct"
