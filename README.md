@@ -16,6 +16,7 @@ Images are used to explain all the functionalities of the program.
 ## Welcome Screen
 
 ![Screenshot 2025-05-22 033649](https://github.com/user-attachments/assets/a690743d-e87b-41c4-b82e-4a6f50d68c2a)
+
 figure 1: welcome screen 
 
 The welcome screen has 3 components, 2 textviews and a button.
@@ -48,5 +49,30 @@ The score screem has 7 compnents. 4 text views and 3 buttons.
 The score screen shows the user how many questions they got correct and gives a custom feedback message baised on the score the user gets in the quiz.
 There is a review button for the user to check the questions they got incorrect for themselves.
 The exit button takes the user out of the program to the phones home page.
+
+#Refrencing list:
+
+Ola, S. 2022. Intents in Kotlin(Version 1.0) [Source code]. 
+https://stackoverflow.com/questions/39462397/intents-in-kotlin (Accessed 
+5 May 2025).
+
+dcd.2020. How to set visibility in Kotlin(Version 1.0) [Source code]. 
+ https://stackoverflow.com/questions/49402001/how-to-set-visibility-in-kotlin(Accessed 
+23 May 2025).
+
+Kotlinlang.2025. If expression(Version 1.0) [Source code]. 
+https://kotlinlang.org/docs/control-flow.html#if-expression (Accessed 
+23 May 2025).
+
+user10516751.2018. What is the difference between `finishAffinity();` and `finish()` methods in Android?(Version 1.0) [Source code]. 
+https://stackoverflow.com/questions/53494605/what-is-the-difference-between-finishaffinity-and-finish-methods-in-and(Accessed 
+23 May 2025).
+
+Kotlinlang.2024. Create arrays(Version 1.0) [Source code]. 
+https://kotlinlang.org/docs/arrays.html (Accessed 
+23 May 2025).
+
+
+
 
 
