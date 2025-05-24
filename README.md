@@ -51,8 +51,10 @@ once a question is answered the user cannot change their answer. A next button a
 
 ## Score Screen
 ![Screenshot 2025-05-22 034048](https://github.com/user-attachments/assets/c2075c30-7e2b-4829-8102-39dd351a7feb)
+
 figure 3.1: score screen before pressing 'review'.
 ![Screenshot 2025-05-22 034059](https://github.com/user-attachments/assets/fbf210ed-a318-45ff-b2ea-e761e7e996fa)
+
 figure 3.2: score screen after pressing 'review'.
 
 The score screem has 7 compnents. 4 text views and 3 buttons.
@@ -78,6 +80,10 @@ Kotlinlang.2024. Create arrays(Version 1.0) [Source code].
 https://kotlinlang.org/docs/arrays.html 
 (Accessed 23 May 2025).
 
+kotlinlang.2025.Append(Version 1.0) [Source code].
+https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.text/append.html#
+[Accessed 24 May 2025]
+
 Kotlinlang.2025. If expression(Version 1.0) [Source code]. 
 https://kotlinlang.org/docs/control-flow.html#if-expression 
 (Accessed 23 May 2025).
@@ -86,9 +92,11 @@ Ola, S. 2022. Intents in Kotlin(Version 1.0) [Source code].
 https://stackoverflow.com/questions/39462397/intents-in-kotlin 
 (Accessed 5 May 2025).
 
-user10516751.2018. What is the difference between `finishAffinity();` and `finish()` methods in Android?(Version 1.0) [Source code]. 
+user10516751.2018. What is the difference between finishAffinity(); and finish() methods in Android?(Version 1.0) [Source code]. 
 https://stackoverflow.com/questions/53494605/what-is-the-difference-between-finishaffinity-and-finish-methods-in-and
 (Accessed 23 May 2025).
+
+
 
 
 
