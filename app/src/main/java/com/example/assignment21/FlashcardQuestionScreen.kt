@@ -35,6 +35,7 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         "Julius Caesar was assassinated on the Ides of March in 44 BC.",
         "The Black Death significantly reduced Europe’s population in the 14th century.")
     private val arrAns = booleanArrayOf(true,false,false,true,true)
+    //Kotlinlang.2024. Create arrays(Version 1.0) [Source code]. https://kotlinlang.org/docs/arrays.html (Accessed 23 May 2025).
     //==============================================================================================
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,11 +51,13 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         txtFeedback = findViewById(R.id.txt_FeedBack)
         txtUserAns =findViewById(R.id.txt_UserAns)
         txtUserInfo =findViewById(R.id.txt_UserInfo)
+        // Adrian, T.2019.findviewbyid in Kotlin (Version 1.0) [source code]. https://medium.com/android-ideas/findviewbyid-in-kotlin-ce4d22193c79 (Accessed 24 May 2025)
         //==========================================================================================
 
         //==========================================================================================
         //Hide next button at the start of the program.
         btnNext.setVisibility(View.GONE)
+        //dcd.2020. How to set visibility in Kotlin(Version 1.0) [Source code].https://stackoverflow.com/questions/49402001/how-to-set-visibility-in-kotlin (Accessed 23 May 2025).
         //==========================================================================================
 
         //==========================================================================================
@@ -72,6 +75,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             btnNext.setVisibility(View.VISIBLE)
             btnTrue.isClickable=false
             btnFalse.isClickable=false}
+        // Coeur.2017.Android - How to achieve setOnClickListener in Kotlin?(Version 1.0) [source code].https://stackoverflow.com/questions/44301301/android-how-to-achieve-setonclicklistener-in-kotlin (Accessed 24 May 2025)
+
         //==========================================================================================
 
         //==========================================================================================
@@ -114,6 +119,8 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 index++
             }
         }
+        //Kotlinlang.2025. If expression(Version 1.0) [Source code]. https://kotlinlang.org/docs/control-flow.html#if-expression (Accessed 23 May 2025).
+        //Ola, S. 2022. Intents in Kotlin(Version 1.0) [Source code]. https://stackoverflow.com/questions/39462397/intents-in-kotlin (Accessed 5 May 2025).
         //==========================================================================================
     }
 }
