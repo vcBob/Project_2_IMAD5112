@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         btnContinue.setOnClickListener{
            val welcomeToFlashcard = Intent(this, FlashcardQuestionScreen::class.java)
             startActivity(welcomeToFlashcard)
-            //Ola, S. 2022. Intents in Kotlin(Version 1.0) [Source code]. https://stackoverflow.com/questions/39462397/intents-in-kotlin (Accessed 23 May 2025).
         }
+        //Ola, S. 2022. Intents in Kotlin(Version 1.0) [Source code]. https://stackoverflow.com/questions/39462397/intents-in-kotlin (Accessed 23 May 2025).
         //==========================================================================================
     }
 }

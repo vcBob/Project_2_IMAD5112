@@ -13,7 +13,6 @@ import androidx.core.view.WindowInsetsCompat
 class FlashcardQuestionScreen : AppCompatActivity() {
     //==============================================================================================
     // declaring components as private variables.
-
     private var questionIndex = 0
     private var select = false
     private var ans = false
@@ -29,14 +28,18 @@ class FlashcardQuestionScreen : AppCompatActivity() {
 
     //==============================================================================================
     // declaring private array.
-    private val arrQuiz = arrayOf("Napoleon Bonaparte was exiled to the island of Elba before his final defeat at Waterloo.", "The ancient city of Machu Picchu was built by the Aztecs.", "The Cold War included direct military conflict between the United States and the Soviet Union.", "Julius Caesar was assassinated on the Ides of March in 44 BC."
-        , "The Black Death significantly reduced Europe’s population in the 14th century.")
+    private val arrQuiz = arrayOf(
+        "Napoleon Bonaparte was exiled to the island of Elba before his final defeat at Waterloo.",
+        "The ancient city of Machu Picchu was built by the Aztecs.",
+        "The Cold War included direct military conflict between the United States and the Soviet Union.",
+        "Julius Caesar was assassinated on the Ides of March in 44 BC.",
+        "The Black Death significantly reduced Europe’s population in the 14th century.")
     private val arrAns = booleanArrayOf(true,false,false,true,true)
-
     //==============================================================================================
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.flashcard_question_screen)
+
         //==========================================================================================
         //Calling components from xml folder to kt folder.
         btnTrue = findViewById(R.id.btn_True)
@@ -49,20 +52,19 @@ class FlashcardQuestionScreen : AppCompatActivity() {
         txtUserInfo =findViewById(R.id.txt_UserInfo)
         //==========================================================================================
 
+        //==========================================================================================
         //Hide next button at the start of the program.
         btnNext.setVisibility(View.GONE)
         //==========================================================================================
-        //True and false button assigning value.
 
+        //==========================================================================================
+        //True and false button assigning value.
         btnTrue.setOnClickListener {
             ans=true
             txtUserAns.text="true"
             btnNext.setVisibility(View.VISIBLE)
             btnTrue.isClickable=false
             btnFalse.isClickable=false
-           //{dcd 2020. How to set visibility in Kotlin(Version 1.0) [Source code].
-             //   https://stackoverflow.com/questions/49402001/how-to-set-visibility-in-kotlin(Accessed
-               // 27 May 2025).
         }
         btnFalse.setOnClickListener {
             ans=false
@@ -71,9 +73,11 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             btnTrue.isClickable=false
             btnFalse.isClickable=false}
         //==========================================================================================
+
+        //==========================================================================================
+        //display questions,check score,move to next screen.
         var index = 0
         var score = 0
-        //val userAns = txtUserAns.text.toString()
         txtHistQuiz.text = "QUESTION(${index+1}):\n${arrQuiz[index+1]}"
 
         btnNext.setOnClickListener {
@@ -110,6 +114,6 @@ class FlashcardQuestionScreen : AppCompatActivity() {
                 index++
             }
         }
-
+        //==========================================================================================
     }
 }
