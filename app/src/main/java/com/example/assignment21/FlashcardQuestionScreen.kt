@@ -60,6 +60,9 @@ class FlashcardQuestionScreen : AppCompatActivity() {
             btnNext.setVisibility(View.VISIBLE)
             btnTrue.isClickable=false
             btnFalse.isClickable=false
+           //{dcd 2020. How to set visibility in Kotlin(Version 1.0) [Source code].
+             //   https://stackoverflow.com/questions/49402001/how-to-set-visibility-in-kotlin(Accessed
+               // 27 May 2025).
         }
         btnFalse.setOnClickListener {
             ans=false

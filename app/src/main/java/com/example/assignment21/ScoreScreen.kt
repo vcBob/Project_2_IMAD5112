@@ -29,7 +29,6 @@ class ScoreScreen : AppCompatActivity() {
         setContentView(R.layout.score_screen)
 
 
-
         //===========================================================================================
         //Call all components from xml folder to kt folder.
         btnExit = findViewById(R.id.btn_Exit)
@@ -43,10 +42,8 @@ class ScoreScreen : AppCompatActivity() {
         var index = 0
 
         //==========================================================================================
-        // declaring array from flash screen to score screen.
+
         val userAns =intent .getIntExtra("score",0)
-        //val arrayQuiz = intent.getIntExtra("arrQuiz",5)
-        //val arrayAns = intent.getIntExtra("arrAns",5)
         //==========================================================================================
 
         btnReviewBack.setVisibility(View.GONE)
